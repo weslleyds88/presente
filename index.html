@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Anos de Amor ❤️ - Nossa História</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Widget de Música de Fundo -->
+    <div class="background-music-widget" id="backgroundMusicWidget">
+        <div class="bg-music-info">
+            <div class="bg-music-icon">🎵</div>
+            <div class="bg-music-details">
+                <div class="bg-music-title" id="bgMusicTitle">Carregando...</div>
+                <div class="bg-music-artist" id="bgMusicArtist">Música de fundo</div>
+            </div>
+        </div>
+        <button class="bg-music-toggle" id="bgMusicToggle" onclick="toggleBackgroundMusic()">⏸️</button>
+    </div>
+    
+    <!-- Efeito especial para Planos -->
+    <div class="planos-special-effect" id="planosEffect">
+        <button class="planos-close-btn" onclick="closePlanosEffect()" title="Fechar">×</button>
+        <div class="planos-content">
+            <div class="planos-title">💕 Planos do BK 💕</div>
+            <div class="planos-subtitle">Nossa música especial</div>
+            <div class="planos-hearts" id="planosHearts">
+                <span>💖</span>
+                <span>💕</span>
+                <span>💗</span>
+                <span>💝</span>
+                <span>💞</span>
+            </div>
+            <div class="planos-particles" id="planosParticles"></div>
+        </div>
+    </div>
+    
+    <!-- Navegação fixa -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">💕 3 Anos</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" onclick="scrollToSection('hero')">Início</a></li>
+                <li><a href="#timeline" onclick="scrollToSection('timeline')">Nossa História</a></li>
+                <li><a href="#memories" onclick="scrollToSection('memories')">Memórias</a></li>
+                <li><a href="#quiz" onclick="scrollToSection('quiz')">Quiz</a></li>
+                <li><a href="#messages" onclick="scrollToSection('messages')">Mensagens</a></li>
+                <li><a href="#promises" onclick="scrollToSection('promises')">Sonhos</a></li>
+                <li><a href="#music" onclick="scrollToSection('music')">Nossas Músicas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Seção Hero com efeito parallax -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="floating-hearts">
+                    <span class="heart">💖</span>
+                    <span class="heart">💕</span>
+                    <span class="heart">💗</span>
+                    <span class="heart">💝</span>
+                    <span class="heart">💞</span>
+                </div>
+                <div class="main-title">
+                    <h1 class="title-line-1">3 Anos</h1>
+                    <h1 class="title-line-2">Juntos</h1>
+                </div>
+                <p class="subtitle">Cada momento ao seu lado é um presente precioso</p>
+                
+                <div class="timer" id="timer">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">0</span>
+                        <span class="time-label">Dias</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">0</span>
+                        <span class="time-label">Horas</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">0</span>
+                        <span class="time-label">Minutos</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">0</span>
+                        <span class="time-label">Segundos</span>
+                    </div>
+                </div>
+                
+                <button class="cta-button" onclick="scrollToSection('message')">
+                    <span>Descobrir Mais</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- Seção de Mensagem Especial -->
+        <section class="message-section" id="message">
+            <div class="message-wrapper">
+                <div class="message-card">
+                    <div class="card-decoration"></div>
+                    <h2 class="message-title">Para Você, Meu Amor ❤️</h2>
+                    <div class="message-content">
+                        <p class="message-text">
+                            Três anos se passaram desde que nossas vidas se entrelaçaram de uma forma tão especial. 
+                            Cada momento ao seu lado é uma lembrança preciosa que guardo no coração.
+                        </p>
+                        <p class="message-text">
+                            Você trouxe luz para minha vida de uma forma que eu nunca imaginei possível. 
+                            Seus sorrisos, suas risadas, sua presença... tudo isso faz cada dia valer a pena.
+                        </p>
+                        <p class="message-text">
+                            Este pequeno presente é apenas uma forma de dizer o quanto você significa para mim. 
+                            Que possamos viver muitos e muitos anos juntos, criando memórias e sonhando juntos.
+                        </p>
+                        <div class="signature-wrapper">
+                            <p class="signature">Com todo meu amor, sempre ❤️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Interativa -->
+        <section class="timeline-section" id="timeline">
+            <h2 class="section-title">Nossa Jornada</h2>
+            <div class="timeline" id="timeline">
+                <div class="timeline-item" data-year="2022">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>O Começo</h3>
+                        <p>O dia em que tudo começou. O momento em que nossas histórias se uniram.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3>Nosso Primeiro Ano</h3>
+                        <p>Um ano cheio de descobertas, risadas e momentos inesquecíveis juntos, e enfrentando dificuldades juntos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>Nosso Segundo Ano</h3>
+                        <p>Crescendo juntos, aprendendo um com o outro e fortalecendo nosso amor, com as dificuldades que apareceram.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <h3>Três Anos de Amor</h3>
+                        <p>Celebrando três anos de uma história linda e que continua sendo escrita, apesar das provações que passamos todos os dias, mês e anos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Memórias com Lightbox -->
+        <section class="memories-section" id="memories">
+            <div class="memories-header">
+                <h2 class="section-title">💕 Nossas Memórias 💕</h2>
+                <p class="section-subtitle">Cada foto conta uma parte da nossa história</p>
+                <div class="memories-decoration">
+                    <span class="decoration-heart">💖</span>
+                    <span class="decoration-heart">💕</span>
+                    <span class="decoration-heart">💗</span>
+                </div>
+            </div>
+            <div class="gallery" id="gallery">
+                <!-- Fotos serão adicionadas via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Lightbox para fotos -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <span class="lightbox-prev" onclick="changePhoto(-1)">&#10094;</span>
+            <span class="lightbox-next" onclick="changePhoto(1)">&#10095;</span>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+
+        <!-- Seção de Quiz Melhorada -->
+        <section class="quiz-section" id="quiz">
+            <h2 class="section-title">Quiz do Nosso Amor 💕</h2>
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span class="progress-text" id="progressText">Pergunta 1 de 3</span>
+                </div>
+                <div class="quiz-question" id="quiz-question">
+                    <h3 id="questionText">Quando começamos a namorar?</h3>
+                    <div class="quiz-options" id="quizOptions">
+                        <!-- Opções serão adicionadas via JavaScript -->
+                    </div>
+                </div>
+                <div class="quiz-result" id="quiz-result"></div>
+            </div>
+        </section>
+
+        <!-- Seção de Mensagens Aleatórias Melhorada -->
+        <section class="love-messages-section" id="messages">
+            <h2 class="section-title">Mensagens do Coração</h2>
+            <div class="messages-container">
+                <button class="message-btn" onclick="showRandomMessage()">
+                    <span class="btn-icon">💌</span>
+                    <span class="btn-text">Clique para uma mensagem especial</span>
+                </button>
+                <div class="random-message" id="random-message">
+                    <p>Clique no botão acima para receber uma mensagem especial! 💕</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Músicas -->
+        <section class="music-section" id="music">
+            <h2 class="section-title">🎵 Nossa Música</h2>
+            <p class="section-subtitle">A música que marcou nossa história</p>
+            
+            <div class="music-special-message">
+                <div class="music-message-icon">💕</div>
+                <div class="music-message-text">
+                    <p class="music-message-title">Planos marcou nossa história e inicio do nosso amor</p>
+                    <p class="music-message-description">Esta música especial representa momentos únicos que vivemos juntos. Cada nota carrega memórias preciosas do nosso amor.</p>
+                </div>
+            </div>
+            
+            <div class="music-player-container">
+                <!-- Lista de Músicas (só Planos) -->
+                <div class="music-list" id="musicList">
+                    <!-- Músicas serão carregadas via JavaScript -->
+                </div>
+            </div>
+            
+            <audio id="audioPlayer" preload="metadata"></audio>
+            <!-- Player do YouTube (oculto) -->
+            <div id="youtubePlayer" style="display: none;"></div>
+        </section>
+        
+        <!-- YouTube IFrame API -->
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+        <!-- Seção de Estatísticas -->
+        <section class="stats-section">
+            <h2 class="section-title">Números do Nosso Amor</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-value" id="statDays">0</div>
+                    <div class="stat-label">Dias Juntos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💕</div>
+                    <div class="stat-value" id="statHours">0</div>
+                    <div class="stat-label">Horas de Felicidade</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value" id="statMinutes">0</div>
+                    <div class="stat-label">Minutos Especiais</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎉</div>
+                    <div class="stat-value">∞</div>
+                    <div class="stat-label">Memórias Criadas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Promessas e Sonhos -->
+        <section class="promises-section" id="promises">
+            <div class="promises-header">
+                <h2 class="section-title">💫 Nossos Sonhos Juntos 💫</h2>
+                <p class="section-subtitle">Promessas e planos para o nosso futuro</p>
+                <div class="promises-decoration">
+                    <span class="decoration-star">⭐</span>
+                    <span class="decoration-star">✨</span>
+                    <span class="decoration-star">🌟</span>
+                </div>
+            </div>
+            <div class="promises-grid" id="promisesGrid">
+                <!-- Promessas serão adicionadas via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-main">Feito com ❤️ especialmente para você</p>
+                <p class="footer-date" id="footer-date"></p>
+                <div class="footer-hearts">
+                    <span>💕</span>
+                    <span>💖</span>
+                    <span>💗</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Áudio de fundo (opcional) -->
+    <audio id="backgroundMusic" loop>
+        <!-- Adicione um arquivo de música aqui se quiser -->
+        <!-- <source src="musica.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Verificar autenticação ao carregar a página
+        if (!auth.isAuthenticated()) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
+

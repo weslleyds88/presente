@@ -1,0 +1,129 @@
+═══════════════════════════════════════════════════════════════
+   🚀 INSTRUÇÕES RÁPIDAS - DEPLOY NO CLOUDFLARE PAGES 🚀
+═══════════════════════════════════════════════════════════════
+
+📋 ANTES DE COMEÇAR:
+
+1. ⚡ INSTALE E RODE LOCALMENTE (RECOMENDADO):
+   → Abra o terminal na pasta do projeto
+   → Execute: npm install
+   → Execute: npm start
+   → O navegador vai abrir automaticamente!
+
+2. ⚠️ ALTERE AS SENHAS NO ARQUIVO auth.js!
+   → Abra auth.js
+   → Encontre "credentials"
+   → Altere as senhas padrão para algo seguro
+
+3. 📸 ADICIONE FOTOS (OPCIONAL):
+   → Com o servidor rodando, faça login como admin
+   → Adicione fotos
+   → Baixe o photos.json gerado
+   → Coloque na pasta do projeto
+
+═══════════════════════════════════════════════════════════════
+
+🔧 PASSO A PASSO PARA DEPLOY:
+
+1️⃣ CRIAR REPOSITÓRIO NO GITHUB:
+   → Acesse github.com
+   → Clique em "New repository"
+   → Nome: presente-3-anos
+   → Crie o repositório
+
+2️⃣ ENVIAR CÓDIGO PARA GITHUB:
+   No terminal/PowerShell na pasta do projeto:
+   
+   git init
+   git add .
+   git commit -m "Presente de 3 anos"
+   git remote add origin https://github.com/SEU_USUARIO/presente-3-anos.git
+   git branch -M main
+   git push -u origin main
+   
+   (Substitua SEU_USUARIO pelo seu usuário do GitHub)
+
+3️⃣ CONFIGURAR CLOUDFLARE PAGES:
+   → Acesse dash.cloudflare.com
+   → Vá em "Pages" > "Create a project"
+   → Conecte seu repositório do GitHub
+   → Selecione "presente-3-anos"
+   → Configure:
+     • Build command: (deixe vazio)
+     • Build output directory: /
+     • Root directory: /
+   → Clique em "Save and Deploy"
+
+4️⃣ AGUARDAR DEPLOY:
+   → Aguarde alguns minutos
+   → Você receberá um link tipo: presente-3-anos.pages.dev
+
+5️⃣ TESTAR:
+   → Acesse o link
+   → Faça login como visualizador ou admin
+   → Teste tudo!
+
+6️⃣ ADICIONAR FOTOS NO SITE PUBLICADO:
+   → Acesse o site publicado
+   → Faça login como admin
+   → Adicione fotos
+   → Baixe o photos.json gerado
+   → Faça commit no git:
+     
+     git add photos.json
+     git commit -m "Adicionar fotos"
+     git push
+   
+   → O Cloudflare vai atualizar automaticamente!
+
+═══════════════════════════════════════════════════════════════
+
+🔑 CREDENCIAIS PADRÃO (ALTERE ANTES DO DEPLOY!):
+
+Visualizador:
+  Usuário: ela
+  Senha: amor123 ⚠️ ALTERE!
+
+Admin:
+  Usuário: admin
+  Senha: admin123 ⚠️ ALTERE!
+
+═══════════════════════════════════════════════════════════════
+
+📁 ARQUIVOS IMPORTANTES:
+
+✓ index.html      - Página principal
+✓ login.html      - Página de login
+✓ admin.html      - Área de admin
+✓ auth.js         - Sistema de autenticação (ALTERE AS SENHAS!)
+✓ photos.json     - Fotos (gerado pelo admin)
+✓ _redirects      - Configuração Cloudflare
+
+═══════════════════════════════════════════════════════════════
+
+💡 DICAS:
+
+✓ Teste localmente antes de fazer deploy
+✓ Sempre altere as senhas antes de publicar
+✓ O arquivo photos.json deve ser commitado no git
+✓ O Cloudflare faz deploy automático quando você faz push
+
+═══════════════════════════════════════════════════════════════
+
+❓ PROBLEMAS?
+
+→ Fotos não aparecem?
+  Certifique-se de que photos.json está no repositório
+
+→ Erro 404?
+  Verifique se _redirects está na raiz do projeto
+
+→ Login não funciona?
+  Verifique se alterou as senhas no auth.js
+
+═══════════════════════════════════════════════════════════════
+
+📖 Para instruções detalhadas, veja o arquivo DEPLOY.md
+
+═══════════════════════════════════════════════════════════════
+

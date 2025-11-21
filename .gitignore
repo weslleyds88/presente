@@ -1,0 +1,19 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Arquivos de desenvolvimento
+node_modules/
+.vscode/
+.idea/
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Não ignorar photos.json e music.json - eles devem ser commitados para o deploy
+
+# npm
+package-lock.json
+

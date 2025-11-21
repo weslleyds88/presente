@@ -1,0 +1,70 @@
+═══════════════════════════════════════════════════════════════
+   💕 PRESENTE DE 3 ANOS - INSTRUÇÕES RÁPIDAS 💕
+═══════════════════════════════════════════════════════════════
+
+📋 PASSO A PASSO PARA PERSONALIZAR:
+
+1️⃣ ABRIR O PRESENTE:
+   → Duplo clique no arquivo "index.html"
+   → Ou clique com botão direito > Abrir com > Navegador
+
+2️⃣ ALTERAR A DATA:
+   → Abra o arquivo "script.js"
+   → Procure por: const START_DATE = new Date('2022-11-23T00:00:00');
+   → Altere a data para quando vocês começaram a namorar
+   → Formato: YYYY-MM-DD (ano-mês-dia)
+
+3️⃣ ADICIONAR FOTOS:
+   → Crie uma pasta chamada "fotos" dentro de C:\Presente
+   → Coloque suas fotos lá
+   → Nomeie como: foto1.jpg, foto2.jpg, foto3.jpg, etc.
+   → Ou edite o arquivo script.js na função loadGallery()
+
+4️⃣ PERSONALIZAR MENSAGENS:
+   → Abra "script.js"
+   → Procure por: const loveMessages = [...]
+   → Adicione ou edite as mensagens românticas
+   → Edite também a mensagem principal no "index.html"
+
+5️⃣ PERSONALIZAR QUIZ:
+   → Abra "script.js"
+   → Procure por: const quizQuestions = [...]
+   → Adicione suas próprias perguntas
+   → Ajuste o número "correct" (0 = primeira opção, 1 = segunda, etc.)
+
+6️⃣ PERSONALIZAR TIMELINE:
+   → Abra "index.html"
+   → Procure pela seção "timeline-section"
+   → Edite os textos e anos para contar sua história
+
+═══════════════════════════════════════════════════════════════
+
+💡 DICAS IMPORTANTES:
+
+✓ Teste tudo antes de apresentar!
+✓ Use fotos em formato JPG ou PNG
+✓ Navegadores recomendados: Chrome, Edge, Firefox
+✓ Funciona perfeitamente no celular também!
+
+═══════════════════════════════════════════════════════════════
+
+🎨 RECURSOS INCLUÍDOS:
+
+✨ Partículas animadas no fundo
+✨ Contador de tempo em tempo real
+✨ Galeria de fotos com lightbox
+✨ Quiz interativo com confete
+✨ Mensagens românticas aleatórias
+✨ Timeline da jornada de 3 anos
+✨ Estatísticas do relacionamento
+✨ Design super elaborado e bonito
+✨ Totalmente responsivo
+
+═══════════════════════════════════════════════════════════════
+
+❤️ Espero que vocês gostem muito do presente!
+
+Feito com muito carinho especialmente para vocês 💕
+
+═══════════════════════════════════════════════════════════════
+

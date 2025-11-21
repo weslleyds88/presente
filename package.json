@@ -1,0 +1,23 @@
+{
+  "name": "presente-3-anos",
+  "version": "1.0.0",
+  "description": "Presente digital especial de 3 anos de namoro",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/login.html",
+    "dev": "live-server --port=3000 --open=/login.html --watch=.",
+    "serve": "http-server -p 3000 -o login.html"
+  },
+  "keywords": [
+    "presente",
+    "amor",
+    "aniversario"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  }
+}
+

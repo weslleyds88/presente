@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - 3 Anos de Amor ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--gradient-1);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            padding: 60px 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.2);
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .login-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .login-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .form-input {
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 20px rgba(248, 181, 0, 0.3);
+        }
+
+        .login-btn {
+            padding: 18px;
+            background: var(--gradient-2);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.6);
+        }
+
+        .error-message {
+            background: rgba(244, 67, 54, 0.3);
+            border: 2px solid rgba(244, 67, 54, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #ffcdd2;
+            display: none;
+            animation: shake 0.5s ease;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .user-type-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .user-type-btn {
+            flex: 1;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .user-type-btn.active {
+            background: var(--gradient-2);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 20px rgba(245, 87, 108, 0.4);
+        }
+
+        .floating-hearts-login {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart-login {
+            position: absolute;
+            font-size: 25px;
+            opacity: 0;
+            animation: floatHeart 6s infinite ease-in-out;
+        }
+
+        .heart-login:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart-login:nth-child(2) { left: 30%; animation-delay: 1s; }
+        .heart-login:nth-child(3) { left: 50%; animation-delay: 2s; }
+        .heart-login:nth-child(4) { left: 70%; animation-delay: 3s; }
+        .heart-login:nth-child(5) { left: 90%; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="floating-hearts-login">
+            <span class="heart-login">💖</span>
+            <span class="heart-login">💕</span>
+            <span class="heart-login">💗</span>
+            <span class="heart-login">💝</span>
+            <span class="heart-login">💞</span>
+        </div>
+        
+        <div class="login-card">
+            <h1 class="login-title">3 Anos ❤️</h1>
+            <p class="login-subtitle">Entre para ver nosso presente especial</p>
+            
+            <div class="user-type-selector">
+                <button class="user-type-btn active" data-type="viewer" onclick="selectUserType('viewer')">
+                    👤 Visualizador
+                </button>
+                <button class="user-type-btn" data-type="admin" onclick="selectUserType('admin')">
+                    🔐 Admin
+                </button>
+            </div>
+            
+            <form class="login-form" id="loginForm" onsubmit="handleLogin(event)">
+                <div class="error-message" id="errorMessage"></div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="username">Usuário</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        class="form-input" 
+                        placeholder="Digite seu usuário"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Senha</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="form-input" 
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    Entrar 💕
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        let selectedUserType = 'viewer';
+
+        function selectUserType(type) {
+            selectedUserType = type;
+            document.querySelectorAll('.user-type-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-type="${type}"]`).classList.add('active');
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (auth.login(username, password, selectedUserType)) {
+                // Redirecionar baseado no tipo de usuário
+                if (selectedUserType === 'admin') {
+                    window.location.href = 'admin.html';
+                } else {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                errorMessage.textContent = 'Usuário ou senha incorretos!';
+                errorMessage.classList.add('show');
+                setTimeout(() => {
+                    errorMessage.classList.remove('show');
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
+
